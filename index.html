@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>UNHAS E ESCOVAS DA LU</title>
+  <style>
+    :root{
+      --rosa:#ff6fa3;
+      --roxo:#6b3cb6;
+      --bg-gradient: linear-gradient(135deg,var(--rosa),var(--roxo));
+      --card:#ffffffcc;
+      --text-dark:#2b0b2a;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background:radial-gradient(circle at 10% 10%, rgba(255,111,160,0.08), transparent), #fff8ff; color:var(--text-dark); -webkit-font-smoothing:antialiased}
+    header{background:var(--bg-gradient); color:white; padding:36px 20px; text-align:center}
+    .container{max-width:980px;margin:0 auto;padding:24px}
+    h1{font-size:28px;margin:8px 0 4px;letter-spacing:0.6px}
+    p.lead{margin:0 0 18px;font-size:16px;opacity:0.95}
+    .hero{display:flex;gap:20px;align-items:center;flex-wrap:wrap;justify-content:center}
+    .card{background:var(--card);border-radius:16px;padding:18px;box-shadow:0 6px 18px rgba(107,60,182,0.12);max-width:520px}
+    .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.15);backdrop-filter:blur(4px);font-weight:600}
+    .phone{display:flex;gap:10px;align-items:center;font-weight:700}
+    .btn{display:inline-block;padding:12px 18px;border-radius:12px;background:linear-gradient(90deg,#fff 10%, rgba(255,255,255,0.85));color:var(--roxo);text-decoration:none;font-weight:700;border:2px solid rgba(255,255,255,0.6)}
+    .actions{margin-top:12px;display:flex;gap:10px;flex-wrap:wrap}
+    .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:18px}
+    .service{background:#fff;padding:12px;border-radius:12px;box-shadow:0 6px 18px rgba(107,60,182,0.06);text-align:center}
+    footer{margin-top:28px;text-align:center;padding:18px;font-size:14px;color:#6b3cb699}
+    @media(min-width:900px){h1{font-size:36px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="badge">Beleza & Estilo</div>
+      <h1>UNHAS E ESCOVAS DA LU</h1>
+      <p class="lead">Cuidados femininos com unhas e escovas profissionais — agende seu horário e fique linda!</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="card" aria-labelledby="title">
+        <h2 id="title">Serviços populares</h2>
+        <div class="services">
+          <div class="service">
+            <strong>Escova modeladora</strong>
+            <div>Acabamento liso, volume controlado</div>
+          </div>
+          <div class="service">
+            <strong>Hidratação</strong>
+            <div>Tratamento profundo para brilho e força</div>
+          </div>
+          <div class="service">
+            <strong>Unhas em gel</strong>
+            <div>Durabilidade e acabamento impecável</div>
+          </div>
+          <div class="service">
+            <strong>Manicure & Alongamento</strong>
+            <div>Design personalizado e cuidado total</div>
+          </div>
+        </div>
+
+        <div style="margin-top:14px;">
+          <div class="phone">Telefone: <a href="tel:+556183408136" style="text-decoration:none;color:var(--roxo);">+55 61 8340-8136</a></div>
+          <div class="actions">
+            <a class="btn" href="https://wa.me/556183408136?text=Ol%C3%A1%20Lu%2C%20gostaria%20de%20agendar%20um%20hor%C3%A1rio" target="_blank" rel="noopener">Abrir WhatsApp</a>
+            <a class="btn" href="#agendar">Agendar online</a>
+          </div>
+        </div>
+      </div>
+
+      <div style="max-width:380px;min-width:240px;text-align:center">
+        <div style="border-radius:18px;overflow:hidden;box-shadow:0 20px 40px rgba(107,60,182,0.15);">
+          <div style="padding:24px;background:var(--bg-gradient);color:white;min-height:200px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:10px;">
+            <div style="font-weight:800;font-size:20px;letter-spacing:0.8px;">UNHAS & ESCOVAS</div>
+            <div style="opacity:0.95">Sinta-se linda. Reserve já.</div>
+            <div style="margin-top:8px;font-weight:700;background:rgba(255,255,255,0.12);padding:8px 12px;border-radius:12px;">{+55 61 8340-8136}</div>
+          </div>
+        </div>
+
+        <div style="margin-top:14px;text-align:center;font-size:13px;color:#6b3cb6cc">Cores: rosa & roxo • Visual feminino</div>
+      </div>
+    </section>
+
+    <section id="agendar" style="margin-top:22px;">
+      <div class="card">
+        <h3>Agendamento rápido</h3>
+        <p style="margin:0 0 12px">Preencha as informações e clique em enviar — ou envie uma mensagem pelo WhatsApp.</p>
+        <form onsubmit="event.preventDefault(); alert('Formul\u00E1rio enviado! (Exemplo) \nAbra o WhatsApp para confirmar o agendamento.');" style="display:grid;gap:10px">
+          <input type="text" name="nome" placeholder="Seu nome" required style="padding:10px;border-radius:8px;border:1px solid #eee" />
+          <input type="tel" name="telefone" placeholder="Telefone" required style="padding:10px;border-radius:8px;border:1px solid #eee" />
+          <select name="servico" style="padding:10px;border-radius:8px;border:1px solid #eee">
+            <option>Escova</option>
+            <option>Hidratação</option>
+            <option>Unhas</option>
+            <option>Manicure</option>
+          </select>
+          <button class="btn" type="submit">Enviar pedido</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div>© UNHAS E ESCOVAS DA LU — Contato: <a href="tel:+556183408136">+55 61 8340-8136</a></div>
+    </footer>
+  </main>
+</body>
+</html>
